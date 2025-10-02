@@ -46,8 +46,10 @@ const MaybeCategoryPanel = () => {
 		console.log( 'Category Panel Debug:', { hasOnlyDefaultCategory, hasSiteCategories, defaultCategorySlug, shouldShowPanel } );
 		if ( hasOnlyDefaultCategory ) {
 			setShouldShowPanel( true );
+		} else {
+			setShouldShowPanel( false );
 		}
-	}, [ hasOnlyDefaultCategory, hasSiteCategories, defaultCategorySlug, shouldShowPanel ] );
+	}, [ hasOnlyDefaultCategory, hasSiteCategories, defaultCategorySlug ] );
 
 	if ( ! shouldShowPanel || ! hasSiteCategories || defaultCategorySlug === 'uncategorized-en' ) {
 		return null;
@@ -93,8 +95,10 @@ const MaybeInternalLinksPanel = () => {
 		console.log( 'Internal Links Panel Debug:', { hasInternalLinks, siteUrl, shouldShowPanel } );
 		if ( ! hasInternalLinks ) {
 			setShouldShowPanel( true );
+		} else {
+			setShouldShowPanel( false );
 		}
-	}, [ hasInternalLinks, siteUrl, shouldShowPanel ] );
+	}, [ hasInternalLinks ] );
 
 	if ( ! shouldShowPanel ) {
 		return null;
@@ -127,8 +131,10 @@ const MaybeExcerptPanel = () => {
 		console.log( 'Excerpt Panel Debug:', { excerpt, shouldShowPanel } );
 		if ( ! excerpt.trim() ) {
 			setShouldShowPanel( true );
+		} else {
+			setShouldShowPanel( false );
 		}
-	}, [ excerpt, shouldShowPanel ] );
+	}, [ excerpt ] );
 
 	if ( ! shouldShowPanel ) {
 		return null;
@@ -168,8 +174,10 @@ const MaybeFeaturedImagePanel = () => {
 		console.log( 'Featured Image Panel Debug:', { featuredImageId, shouldShowPanel } );
 		if ( ! featuredImageId ) {
 			setShouldShowPanel( true );
+		} else {
+			setShouldShowPanel( false );
 		}
-	}, [ featuredImageId, shouldShowPanel ] );
+	}, [ featuredImageId ] );
 
 	if ( ! shouldShowPanel ) {
 		return null;
@@ -221,16 +229,16 @@ registerPlugin( 'post-checklist-category', {
 	render: CategoryPanel,
 } );
 
-registerPlugin( 'post-checklist-internal-links', {
-	render: InternalLinksPanel,
-} );
-
 registerPlugin( 'post-checklist-excerpt', {
 	render: ExcerptPanel,
 } );
 
 registerPlugin( 'post-checklist-featured-image', {
 	render: FeaturedImagePanel,
+} );
+
+registerPlugin( 'post-checklist-internal-links', {
+	render: InternalLinksPanel,
 } );
 
 console.log( 'Post Checklist Plugins Registered' );
