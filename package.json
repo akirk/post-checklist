@@ -1,0 +1,12 @@
+{
+  "name": "post-checklist",
+  "version": "1.0.0",
+  "description": "Pre-publish checklist for WordPress posts",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.0.0"
+  }
+}

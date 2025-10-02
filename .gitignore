@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build artifacts (built by GitHub Actions for releases)
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temp files
+*.tmp
