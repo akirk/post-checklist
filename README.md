@@ -1,6 +1,10 @@
 # Post Checklist
 
-A WordPress plugin that adds pre-publish checklist panels to help ensure your posts are ready for publication.
+A WordPress plugin that adds pre-publish checklist panels to help ensure your posts are ready for publication. [Try it in Playground](https://playground.wordpress.net/#{%22landingPage%22:%22/wp-admin/post-new.php%22,%22steps%22:[{%22step%22:%22unzip%22,%22zipFile%22:{%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy/?repo=akirk/post-checklist&release=v1.0.0&asset=post-checklist.zip%22},%22extractToPath%22:%22/wordpress/wp-content/plugins/post-checklist%22},{%22step%22:%22activatePlugin%22,%22pluginPath%22:%22/wordpress/wp-content/plugins/post-checklist%22}]}).
+
+## Screenshot
+
+<img width="564" height="1242" alt="screenshot-post-checklist" src="https://github.com/user-attachments/assets/2008d0bc-58a0-4870-b57a-5fcb8a3f47c3" />
 
 ## Features
 
